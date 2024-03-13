@@ -1,0 +1,241 @@
+/* Default styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: transparent;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    display: flex;
+    flex-direction: column; /* Updated to column layout */
+    align-items: center; /* Center align content horizontally */
+}
+
+#container #location {
+    height: 60px;
+    width: 100%;
+    border-radius: 5%;
+    position: absolute;
+    left: 0%;
+    top: 11%;
+    display: flex;
+    justify-content: center;
+}
+
+#container input {
+    border-radius: 10%;
+    height: 50px;
+    width: 40%; /* Adjusted width */
+    margin: 0px 20px;
+    padding: 0 20px;
+    left: 0%;
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 20px;
+    color: black;
+}
+
+#container input::placeholder {
+    color: #000000d0;
+}
+
+#container input[type="submit"] {
+    cursor: pointer;
+    width: 150px;
+    background: #000000d0;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#tempIcon {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    margin-top: 50px;
+}
+
+#weatherCountry {
+    font-size: 40px;
+    position: absolute;
+    top: 37%;
+    margin-left: auto;
+    margin-right: 20%;
+    margin-top: 5px;
+}
+
+#temperature {
+    font-size: 45px;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    margin-top: 10px;    
+}
+
+#temperature b {
+    color: red;
+}
+
+#weatherDescription {
+    font-size: 20px;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 38%;
+    left: 60%;
+    margin-bottom: 130px;
+}
+
+#container ul {
+    position: absolute;
+    bottom: 17%;
+    left: auto;
+    right: auto;
+    margin-right: 20%;
+}
+
+#container ul li {
+    font-size: 20px;
+    margin: 20px 0;
+    list-style-type: none;
+    margin-right: 5rem;
+}
+
+.features {
+    justify-content: center;
+}
+
+.flex {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 700px;
+    height: 30rem;
+    margin: 1em;
+    margin-top: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.h1 {
+    margin-left: 28rem;
+    margin-top: 25rem;
+    font-size: 1.5rem;
+    font-family: "myFirstFont";
+}
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("fonts/ticking-timebomb-bb.regular.ttf");
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    #container #location {
+        top: 20%;
+    }
+
+    input[type="text"], input[type="submit"] {
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+    }
+
+    #tempIcon {
+        height: 100px;
+        width: 100px;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #weatherCountry {
+        font-size: 30px;
+        top: 33%;
+    }
+
+    #temperature {
+        font-size: 35px;
+        top: 40%;
+    }
+
+    #weatherDescription {
+        font-size: 18px;
+        bottom: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #container ul {
+        bottom: 15%;
+        margin-right: 0;
+    }
+
+    #container ul li {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .h1 {
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container #location {
+        top: 25%;
+    }
+
+    input[type="text"], input[type="submit"] {
+        width: calc(100% - 20px);
+        margin: 10px 10px;
+    }
+
+    #tempIcon {
+        height: 80px;
+        width: 80px;
+        top: 30%;
+    }
+
+    #weatherCountry {
+        font-size: 25px;
+        top: 30%;
+    }
+
+    #temperature {
+        font-size: 30px;
+        top: 38%;
+    }
+
+    #weatherDescription {
+        font-size: 16px;
+        bottom: 30%;
+    }
+
+    #container ul {
+        bottom: 10%;
+    }
+
+    .flex {
+        height: 25rem;
+        margin-top: 12rem;
+    }
+}
